@@ -1,9 +1,11 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "coupon_categories")
+@Data
 public class CouponCategories {
 
     @Id

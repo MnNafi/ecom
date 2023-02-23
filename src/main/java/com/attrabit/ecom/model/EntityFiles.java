@@ -9,7 +9,7 @@ import java.sql.Timestamp;
 @Entity
 @Table(name = "entity_files")
 @Data
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 public class EntityFiles {
 
     @Id
