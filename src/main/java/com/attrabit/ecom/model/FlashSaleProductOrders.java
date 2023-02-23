@@ -3,13 +3,16 @@ package com.attrabit.ecom.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Entity
 @Table(name = "flash_sale_product_orders")
 @Data
 public class FlashSaleProductOrders {
 
-    @EmbeddedId
-    private FlashSaleProductOrders id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @MapsId("flashSaleProductId")

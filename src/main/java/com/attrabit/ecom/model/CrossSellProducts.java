@@ -1,9 +1,11 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "cross_sell_products")
+@Data
 public class CrossSellProducts {
 
     @Id

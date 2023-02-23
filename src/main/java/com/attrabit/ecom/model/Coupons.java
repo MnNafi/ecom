@@ -1,12 +1,14 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.math.BigDecimal;
 import java.util.Date;
 
 @Entity
 @Table(name = "coupons")
+@Data
 public class Coupons {
 
     @Id

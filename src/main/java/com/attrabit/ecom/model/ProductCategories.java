@@ -1,8 +1,11 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 @Entity
 @Table(name = "product_categories")
+@Data
 public class ProductCategories {
 
     @Id
@@ -19,34 +22,34 @@ public class ProductCategories {
 
     // Constructors, getters, and setters
 
-    public ProductCategories() {}
-
-    public ProductCategories(Products product, Categories category) {
-        this.product = product;
-        this.category = category;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Products getProduct() {
-        return product;
-    }
-
-    public void setProduct(Products product) {
-        this.product = product;
-    }
-
-    public Categories getCategory() {
-        return category;
-    }
-
-    public void setCategory(Categories category) {
-        this.category = category;
-    }
+//    public ProductCategories() {}
+//
+//    public ProductCategories(Products product, Categories category) {
+//        this.product = product;
+//        this.category = category;
+//    }
+//
+//    public Long getId() {
+//        return id;
+//    }
+//
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
+//
+//    public Products getProduct() {
+//        return product;
+//    }
+//
+//    public void setProduct(Products product) {
+//        this.product = product;
+//    }
+//
+//    public Categories getCategory() {
+//        return category;
+//    }
+//
+//    public void setCategory(Categories category) {
+//        this.category = category;
+//    }
 }

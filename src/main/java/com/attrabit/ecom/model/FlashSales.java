@@ -9,7 +9,6 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "flash_sales")
 @Data
-@AllArgsConstructor
 public class FlashSales {
 
     @Id
