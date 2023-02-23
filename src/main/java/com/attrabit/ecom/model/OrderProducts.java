@@ -1,11 +1,13 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "order_products")
+@Data
 public class OrderProducts {
 
     @Id
