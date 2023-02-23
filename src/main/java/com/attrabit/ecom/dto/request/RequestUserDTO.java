@@ -3,8 +3,6 @@ package com.attrabit.ecom.dto.request;
 
 import com.attrabit.ecom.annotation.*;
 
-import java.util.Date;
-
 public record RequestUserDTO(
         @NullValid(message = "First name is not null")
         @SizeValid(min = 2, max = 25, message = "First name is length of 2 to 25")
@@ -23,7 +21,7 @@ public record RequestUserDTO(
         @PhoneNumberValid(message = "Phone number is not valid!")
         String phone,
         @NullValid(message = "Password is not null")
-        @SizeValid(min = 11, max = 14, message = "Password is length of 8 to 20")
+        @SizeValid(min = 8, max = 20, message = "Password is length of 8 to 20")
         @PasswordValid(message = "Invalid password!")
         String password
 ) {

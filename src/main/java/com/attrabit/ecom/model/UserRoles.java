@@ -3,14 +3,24 @@ package com.attrabit.ecom.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.sql.Timestamp;
+import java.util.Date;
+
 
 @Entity
 @Table(name = "user_roles")
 @Data
 public class UserRoles {
+    @SequenceGenerator(
+            name = "user_roles_sequence",
+            sequenceName = "user_roles_sequence",
+            allocationSize = 1
+    )
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "user_roles_sequence"
+    )
+    @Column(name = "id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -22,10 +32,10 @@ public class UserRoles {
     private Roles role;
 
     @Column(name = "created_at")
-    private Timestamp createdAt;
+    private Date createdAt;
 
     @Column(name = "updated_at")
-    private Timestamp updatedAt;
+    private Date updatedAt;
 
     // getters and setters
 }

@@ -3,6 +3,7 @@ package com.attrabit.ecom.controller;
 
 import com.attrabit.ecom.constant.URLSuppliers;
 import com.attrabit.ecom.dto.respose.ResponseUserDTO;
+import com.attrabit.ecom.repository.RolesRepository;
 import com.attrabit.ecom.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,14 +19,17 @@ import java.util.List;
 @Slf4j
 public class HomeController {
     private final UserService userService;
-    @GetMapping(URLSuppliers.homePageUrls)
+    private final RolesRepository rolesRepository;
+
+    @GetMapping(URLSuppliers.HOME_PAGE_URLS)
     public ResponseEntity<String> home(){
 
+        rolesRepository.findAll().forEach(System.out::println);
         return new ResponseEntity<>("Home Page", HttpStatus.OK);
     }
 
 
-    @GetMapping(URLSuppliers.homePageAllUsersUrls)
+    @GetMapping(URLSuppliers.HOME_PAGE_ALL_USERS_URLS)
     public ResponseEntity<List<ResponseUserDTO>> all(){
         return new ResponseEntity<>(userService.getAllUser(), HttpStatus.OK);
     }
