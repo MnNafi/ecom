@@ -20,31 +20,5 @@ public class DefaultAddress {
     @JoinColumn(name = "address_id", referencedColumnName = "id", nullable = false)
     private Address address;
 
-    public DefaultAddress() {}
 
-    // getters and setters
-
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-//
-//    public Users getUser() {
-//        return user;
-//    }
-//
-//    public void setUser(Users user) {
-//        this.user = user;
-//    }
-//
-//    public Address getAddress() {
-//        return address;
-//    }
-//
-//    public void setAddress(Address address) {
-//        this.address = address;
-//    }
 }

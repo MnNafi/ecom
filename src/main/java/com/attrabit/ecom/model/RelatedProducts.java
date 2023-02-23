@@ -1,15 +1,17 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "related_products")
+@Data
 public class RelatedProducts {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private Long id;
 
     @ManyToOne
     @JoinColumn(name = "product_id", referencedColumnName = "id")
@@ -19,35 +21,4 @@ public class RelatedProducts {
     @JoinColumn(name = "related_product_id", referencedColumnName = "id")
     private Products relatedProduct;
 
-    public RelatedProducts() {
-    }
-
-    public RelatedProducts(Products product, Products relatedProduct) {
-        this.product = product;
-        this.relatedProduct = relatedProduct;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public Products getProduct() {
-        return product;
-    }
-
-    public void setProduct(Products product) {
-        this.product = product;
-    }
-
-    public Products getRelatedProduct() {
-        return relatedProduct;
-    }
-
-    public void setRelatedProduct(Products relatedProduct) {
-        this.relatedProduct = relatedProduct;
-    }
 }

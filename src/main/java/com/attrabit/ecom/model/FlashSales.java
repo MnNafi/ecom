@@ -1,10 +1,9 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "flash_sales")
@@ -16,10 +15,10 @@ public class FlashSales {
     private Long id;
 
     @Column(name = "created_at")
-    private LocalDateTime createdAt;
+    private Date createdAt;
 
     @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
+    private Date updatedAt;
 
     // Constructors, getters, and setters
     // ...

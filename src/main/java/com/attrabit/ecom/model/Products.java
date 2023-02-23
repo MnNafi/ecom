@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "products")
@@ -35,10 +35,10 @@ public class Products {
     private String specialPriceType;
 
     @Column(name = "special_price_start_date")
-    private LocalDateTime specialPriceStartDate;
+    private Date specialPriceStartDate;
 
     @Column(name = "special_price_end_date")
-    private LocalDateTime specialPriceEndDate;
+    private Date specialPriceEndDate;
 
     @Column(name = "selling_price")
     private BigDecimal sellingPrice;
@@ -62,19 +62,19 @@ public class Products {
     private Boolean isActive;
 
     @Column(name = "new_from")
-    private LocalDateTime newFrom;
+    private Date newFrom;
 
     @Column(name = "new_to")
-    private LocalDateTime newTo;
+    private Date newTo;
 
     @Column(name = "deleted_at")
-    private LocalDateTime deletedAt;
+    private Date deletedAt;
 
     @Column(name = "created_at")
-    private LocalDateTime createdAt;
+    private Date createdAt;
 
     @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
+    private Date updatedAt;
 
     @Column(name = "virtual", nullable = false)
     private Boolean virtual;

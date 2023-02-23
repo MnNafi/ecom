@@ -3,7 +3,7 @@ package com.attrabit.ecom.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "menu_items")
@@ -55,10 +55,10 @@ public class MenuItems {
     private Boolean isActive;
 
     @Column(name = "created_at")
-    private LocalDateTime createdAt;
+    private Date createdAt;
 
     @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
+    private Date updatedAt;
 
     // Constructors, getters, and setters
     // ...

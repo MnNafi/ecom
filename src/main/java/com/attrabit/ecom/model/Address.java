@@ -3,7 +3,7 @@ package com.attrabit.ecom.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "addresses")
@@ -44,10 +44,10 @@ public class Address {
     private String country;
 
     @Column(name = "created_at")
-    private LocalDateTime createdAt;
+    private Date createdAt;
 
     @Column(name = "updated_at")
-    private LocalDateTime updatedAt;
+    private Date updatedAt;
 
     // Getters and Setters for all fields
 }

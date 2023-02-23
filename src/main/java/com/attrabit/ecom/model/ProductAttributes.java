@@ -1,9 +1,11 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "product_attributes")
+@Data
 public class ProductAttributes {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

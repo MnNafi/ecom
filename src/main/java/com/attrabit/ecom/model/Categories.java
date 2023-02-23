@@ -3,6 +3,8 @@ package com.attrabit.ecom.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.Date;
+
 @Entity
 @Table(name = "categories")
 @Data
@@ -10,7 +12,7 @@ public class Categories {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private int id;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id", referencedColumnName = "id", nullable = true, foreignKey = @ForeignKey(name = "fk_categories_parent_id"))
@@ -29,72 +31,10 @@ public class Categories {
     private boolean isActive;
 
     @Column(name = "created_at")
-    private java.sql.Timestamp createdAt;
+    private Date createdAt;
 
     @Column(name = "updated_at")
-    private java.sql.Timestamp updatedAt;
+    private Date updatedAt;
 
-//    public int getId() {
-//        return id;
-//    }
-//
-//    public void setId(int id) {
-//        this.id = id;
-//    }
-//
-//    public Categories getParent() {
-//        return parent;
-//    }
-//
-//    public void setParent(Categories parent) {
-//        this.parent = parent;
-//    }
-//
-//    public String getSlug() {
-//        return slug;
-//    }
-//
-//    public void setSlug(String slug) {
-//        this.slug = slug;
-//    }
-//
-//    public Integer getPosition() {
-//        return position;
-//    }
-//
-//    public void setPosition(Integer position) {
-//        this.position = position;
-//    }
-//
-//    public boolean isSearchable() {
-//        return isSearchable;
-//    }
-//
-//    public void setSearchable(boolean isSearchable) {
-//        this.isSearchable = isSearchable;
-//    }
-//
-//    public boolean isActive() {
-//        return isActive;
-//    }
-//
-//    public void setActive(boolean isActive) {
-//        this.isActive = isActive;
-//    }
-//
-//    public java.sql.Timestamp getCreatedAt() {
-//        return createdAt;
-//    }
-//
-//    public void setCreatedAt(java.sql.Timestamp createdAt) {
-//        this.createdAt = createdAt;
-//    }
-//
-//    public java.sql.Timestamp getUpdatedAt() {
-//        return updatedAt;
-//    }
-//
-//    public void setUpdatedAt(java.sql.Timestamp updatedAt) {
-//        this.updatedAt = updatedAt;
-//    }
+
 }

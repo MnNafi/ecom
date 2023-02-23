@@ -1,11 +1,14 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
+
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 @Table(name = "tax_rates")
+@Data
 public class TaxRates {
 
     @Id
@@ -35,13 +38,13 @@ public class TaxRates {
     private Long position;
 
     @Column(name = "deleted_at")
-    private LocalDateTime deletedAt;
+    private Date deletedAt;
 
     @Column(name = "created_at", nullable = false)
-    private LocalDateTime createdAt;
+    private Date createdAt;
 
     @Column(name = "updated_at", nullable = false)
-    private LocalDateTime updatedAt;
+    private Date updatedAt;
 
     // Constructor, getters and setters
 }

@@ -1,9 +1,11 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "order_product_options")
+@Data
 public class OrderProductOptions {
 
     @Id
@@ -21,35 +23,4 @@ public class OrderProductOptions {
     @Column(columnDefinition = "TEXT")
     private String value;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public OrderProducts getOrderProduct() {
-        return orderProduct;
-    }
-
-    public void setOrderProduct(OrderProducts orderProduct) {
-        this.orderProduct = orderProduct;
-    }
-
-    public Options getOption() {
-        return option;
-    }
-
-    public void setOption(Options option) {
-        this.option = option;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
 }

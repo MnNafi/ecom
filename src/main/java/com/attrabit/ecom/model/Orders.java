@@ -2,7 +2,6 @@ package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 @Entity
 @Table(name = "orders")

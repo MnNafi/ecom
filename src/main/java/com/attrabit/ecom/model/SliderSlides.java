@@ -3,7 +3,7 @@ package com.attrabit.ecom.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "slider_slides")
@@ -12,7 +12,7 @@ public class SliderSlides {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "slider_id", nullable = false, referencedColumnName = "id", foreignKey = @ForeignKey(name = "FK_slider_slides_sliders"))
@@ -31,10 +31,10 @@ public class SliderSlides {
     private Integer position;
 
     @Column(name = "created_at")
-    private Timestamp createdAt;
+    private Date createdAt;
 
     @Column(name = "updated_at")
-    private Timestamp updatedAt;
+    private Date updatedAt;
 
     // constructors, getters, and setters
 }

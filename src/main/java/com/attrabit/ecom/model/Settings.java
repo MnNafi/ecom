@@ -3,7 +3,7 @@ package com.attrabit.ecom.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "settings")
@@ -12,7 +12,7 @@ public class Settings {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(name = "key", nullable = false)
     private String key;
@@ -25,10 +25,10 @@ public class Settings {
     private String plainValue;
 
     @Column(name = "created_at")
-    private Timestamp createdAt;
+    private Date createdAt;
 
     @Column(name = "updated_at")
-    private Timestamp updatedAt;
+    private Date updatedAt;
 
     // constructors, getters, and setters
 }

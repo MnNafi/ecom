@@ -1,7 +1,6 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
-
 import lombok.Data;
 
 import java.util.Date;

@@ -16,10 +16,11 @@ public class OrderProductOptionValues {
     @JoinColumn(name = "order_product_option_id", referencedColumnName = "id")
     private OrderProductOptions orderProductOption;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "option_value_id", referencedColumnName = "id")
-    private OptionValues optionValue;
+//    @ManyToOne(fetch = FetchType.LAZY)
+//    @JoinColumn(name = "option_value_id", referencedColumnName = "id")
+//    private OptionValues optionValue;
 
+    @Column(name = "price")
     private Double price;
 
     // constructors, getters and setters

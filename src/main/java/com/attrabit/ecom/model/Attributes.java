@@ -3,7 +3,8 @@ package com.attrabit.ecom.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.sql.Timestamp;
+import java.util.Date;
+
 
 @Entity
 @Table(name = "attributes")
@@ -23,10 +24,10 @@ public class Attributes {
     private boolean isFilterable;
 
     @Column(name = "created_at")
-    private Timestamp createdAt;
+    private Date createdAt;
 
     @Column(name = "updated_at")
-    private Timestamp updatedAt;
+    private Date updatedAt;
 
     @Column(name = "slug")
     private String slug;

@@ -3,7 +3,7 @@ package com.attrabit.ecom.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "brands")
@@ -21,60 +21,10 @@ public class Brands {
     private Boolean isActive;
 
     @Column(name = "created_at")
-    private Timestamp createdAt;
+    private Date createdAt;
 
     @Column(name = "updated_at")
-    private Timestamp updatedAt;
+    private Date updatedAt;
 
-    // constructors, getters and setters
 
-//    public Brands() {
-//    }
-//
-//    public Brands(String slug, Boolean isActive) {
-//        this.slug = slug;
-//        this.isActive = isActive;
-//    }
-//
-//    // getters and setters
-//
-//    public Long getId() {
-//        return id;
-//    }
-//
-//    public void setId(Long id) {
-//        this.id = id;
-//    }
-//
-//    public String getSlug() {
-//        return slug;
-//    }
-//
-//    public void setSlug(String slug) {
-//        this.slug = slug;
-//    }
-//
-//    public Boolean getIsActive() {
-//        return isActive;
-//    }
-//
-//    public void setIsActive(Boolean isActive) {
-//        this.isActive = isActive;
-//    }
-//
-//    public Timestamp getCreatedAt() {
-//        return createdAt;
-//    }
-//
-//    public void setCreatedAt(Timestamp createdAt) {
-//        this.createdAt = createdAt;
-//    }
-//
-//    public Timestamp getUpdatedAt() {
-//        return updatedAt;
-//    }
-//
-//    public void setUpdatedAt(Timestamp updatedAt) {
-//        this.updatedAt = updatedAt;
-//    }
 }

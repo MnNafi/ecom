@@ -1,9 +1,11 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
 @Entity
 @Table(name = "order_downloads")
+@Data
 public class OrderDownloads {
 
     @Id
@@ -18,30 +20,5 @@ public class OrderDownloads {
     @JoinColumn(name = "file_id", referencedColumnName = "id")
     private Files file;
 
-    // getters and setters
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Orders getOrder() {
-        return order;
-    }
-
-    public void setOrder(Orders order) {
-        this.order = order;
-    }
-
-    public Files getFile() {
-        return file;
-    }
-
-    public void setFile(Files file) {
-        this.file = file;
-    }
 
 }

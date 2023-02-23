@@ -14,7 +14,7 @@ public class FlashSaleProducts {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Integer id;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "flash_sale_id", referencedColumnName = "id", nullable = false)

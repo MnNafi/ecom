@@ -1,11 +1,13 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
-import java.sql.Timestamp;
+import java.util.Date;
 
 @Entity
 @Table(name = "translations")
+@Data
 public class Translations {
 
     @Id
@@ -16,61 +18,9 @@ public class Translations {
     private String key;
 
     @Column(name = "created_at")
-    private Timestamp createdAt;
+    private Date createdAt;
 
     @Column(name = "updated_at")
-    private Timestamp updatedAt;
+    private Date updatedAt;
 
-    // Constructor, getters and setters
-
-    public Translations() {
-    }
-
-    public Translations(String key) {
-        this.key = key;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getKey() {
-        return key;
-    }
-
-    public void setKey(String key) {
-        this.key = key;
-    }
-
-    public Timestamp getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Timestamp createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Timestamp getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Timestamp updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    // toString method
-
-    @Override
-    public String toString() {
-        return "Translation{" +
-                "id=" + id +
-                ", key='" + key + '\'' +
-                ", createdAt=" + createdAt +
-                ", updatedAt=" + updatedAt +
-                '}';
-    }
 }
