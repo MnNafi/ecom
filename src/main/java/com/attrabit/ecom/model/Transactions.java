@@ -3,7 +3,7 @@ package com.attrabit.ecom.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.util.Date;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "transactions")
@@ -12,7 +12,7 @@ public class Transactions {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
 //    @ManyToOne
 //    @JoinColumn(name = "order_id", referencedColumnName = "id", nullable = false,
@@ -27,13 +27,13 @@ public class Transactions {
     private String paymentMethod;
 
     @Column(name = "deleted_at")
-    private Date deletedAt;
+    private Timestamp deletedAt;
 
     @Column(name = "created_at")
-    private Date createdAt;
+    private Timestamp createdAt;
 
     @Column(name = "updated_at")
-    private Date updatedAt;
+    private Timestamp updatedAt;
 
     // Constructor, getters, and setters
 }

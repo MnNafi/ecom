@@ -18,7 +18,7 @@ public class DefaultAddress {
 
     @ManyToOne
     @JoinColumn(name = "address_id", referencedColumnName = "id", nullable = false)
-    private Address address;
+    private Addresses address;
 
 
 }

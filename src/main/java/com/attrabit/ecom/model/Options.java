@@ -1,13 +1,10 @@
 package com.attrabit.ecom.model;
 
 import jakarta.persistence.*;
-import lombok.Data;
-
-import java.util.Date;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "options")
-@Data
 public class Options {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,13 +23,13 @@ public class Options {
     private Long position;
 
     @Column(name = "deleted_at")
-    private Date deletedAt;
+    private Timestamp deletedAt;
 
     @Column(name = "created_at")
-    private Date createdAt;
+    private Timestamp createdAt;
 
     @Column(name = "updated_at")
-    private Date updatedAt;
+    private Timestamp updatedAt;
 
     // constructors, getters and setters
 }

@@ -1,9 +1,9 @@
-package com.attrabit.ecom.model;//package com.attrabit.ecom.model;
+//package com.attrabit.ecom.model;
 //
 //import jakarta.persistence.*;
 //import lombok.Data;
 //
-//import java.util.Date;
+//import java.sql.Timestamp;
 //
 //@Entity
 //@Table(name = "option_values")
@@ -25,13 +25,14 @@ package com.attrabit.ecom.model;//package com.attrabit.ecom.model;
 //    private String priceType;
 //
 //    @Column(name = "position", nullable = false)
-//    private Date position;
+//    private Integer position;
 //
 //    @Column(name = "created_at")
-//    private Date createdAt;
+//    private Timestamp createdAt;
 //
 //    @Column(name = "updated_at")
-//    private Date updatedAt;
+//    private Timestamp updatedAt;
 //
-//    // getters and setters omitted for brevity
+//    // constructors, getters and setters
 //}
+
